@@ -1,1 +1,1 @@
-aiven_token    = "AIVEN_TOKEN"
+aiven_token = "AIVEN_TOKEN"

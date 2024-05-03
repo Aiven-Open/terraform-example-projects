@@ -22,12 +22,12 @@ resource "aiven_organization" "main" {
 # Create units within the organization for the engineering
 # and finance departments.
 resource "aiven_organizational_unit" "eng_unit" {
-  name = "Engineering"
+  name      = "Engineering"
   parent_id = aiven_organization.main.id
 }
 
 resource "aiven_organizational_unit" "finance_unit" {
-  name = "Finance"
+  name      = "Finance"
   parent_id = aiven_organization.main.id
 }
 
@@ -36,32 +36,32 @@ resource "aiven_organizational_unit" "finance_unit" {
 
 # Engineering projects
 resource "aiven_project" "eng_prod" {
-  project    = "${var.prod_project_name}-eng"
+  project   = "${var.prod_project_name}-eng"
   parent_id = aiven_organizational_unit.eng_unit.id
 }
 
 resource "aiven_project" "eng_qa" {
-  project    = "${var.qa_project_name}-eng"
+  project   = "${var.qa_project_name}-eng"
   parent_id = aiven_organizational_unit.eng_unit.id
 }
 
 resource "aiven_project" "dev-eng" {
-  project    = "${var.dev_project_name}-eng"
+  project   = "${var.dev_project_name}-eng"
   parent_id = aiven_organizational_unit.eng_unit.id
 }
 
 # Finance projects
 resource "aiven_project" "fin_prod" {
-  project    = "${var.prod_project_name}-fin"
+  project   = "${var.prod_project_name}-fin"
   parent_id = aiven_organizational_unit.finance_unit.id
 }
 
 resource "aiven_project" "fin_qa" {
-  project    = "${var.qa_project_name}-fin"
+  project   = "${var.qa_project_name}-fin"
   parent_id = aiven_organizational_unit.finance_unit.id
 }
 
 resource "aiven_project" "fin_dev" {
-  project    = "${var.dev_project_name}-fin"
+  project   = "${var.dev_project_name}-fin
   parent_id = aiven_organizational_unit.finance_unit.id
 }
