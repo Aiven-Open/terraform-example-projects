@@ -62,6 +62,6 @@ resource "aiven_project" "fin_qa" {
 }
 
 resource "aiven_project" "fin_dev" {
-  project   = "${var.dev_project_name}-fin"
+  project   = "${var.dev_project_name}-fin
   parent_id = aiven_organizational_unit.finance_unit.id
 }
