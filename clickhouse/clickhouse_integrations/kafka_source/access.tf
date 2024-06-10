@@ -21,13 +21,11 @@ resource "aiven_clickhouse_grant" "writer_role" {
   privilege_grant {
     privilege = "INSERT"
     database  = aiven_clickhouse_database.iot_analytics.name
-    table     = "*"
   }
 
   privilege_grant {
     privilege = "SELECT"
     database  = aiven_clickhouse_database.iot_analytics.name
-    table     = "*"
   }
 }
 
@@ -66,7 +64,6 @@ resource "aiven_clickhouse_grant" "reader_role" {
   privilege_grant {
     privilege = "SELECT"
     database  = aiven_clickhouse_database.iot_analytics.name
-    table     = "*"
   }
 }
 
