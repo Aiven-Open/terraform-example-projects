@@ -45,7 +45,7 @@
       $ terraform destroy 
       ```
 
-   Start with the get started example to create your first organization, project, and user group in Aiven.
+   Start with the [get started](https://github.com/Aiven-Open/terraform-example-projects/tree/main/get-started) example to create your first organization, project, and user group in Aiven.
 
    # License
 
